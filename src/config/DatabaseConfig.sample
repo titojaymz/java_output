@@ -1,0 +1,79 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package config;
+
+/**
+ *
+ * @author dswd
+ */
+public class DatabaseConfig {
+    
+    private String hostName;
+    private String databaseName;
+    private String databaseUsername;
+    private String databasePassword;
+    private String hostAndDatabase;
+
+    /***
+     * define your database configuration here
+     * hostName - database host name
+     * databaseName - name of database
+     * databaseUsername - username credential for your database
+     * databasePassword - password of the credential for your database
+     */
+    public DatabaseConfig() {
+        this.hostName = "jdbc:mysql://localhost/";
+        this.databaseName = "";
+        this.databaseUsername = "";
+        this.databasePassword = "";
+        this.hostAndDatabase = this.hostName + this.databaseName;
+    }
+    
+    public DatabaseConfig(String hostName, String databaseName, String databaseUsername, String databasePassword) {
+        this.hostName = hostName;
+        this.databaseName = databaseName;
+        this.databaseUsername = databaseUsername;
+        this.databasePassword = databasePassword;
+        this.hostAndDatabase = this.hostName + this.databaseName;
+    }
+
+    public void setHostName(String hostName) {
+        this.hostName = hostName;
+    }
+
+    public void setDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+    }
+
+    public void setDatabaseUsername(String databaseUsername) {
+        this.databaseUsername = databaseUsername;
+    }
+
+    public void setDatabasePassword(String databasePassword) {
+        this.databasePassword = databasePassword;
+    }
+
+    public String getHostName() {
+        return hostName;
+    }
+
+    public String getDatabaseName() {
+        return databaseName;
+    }
+
+    public String getDatabaseUsername() {
+        return databaseUsername;
+    }
+
+    public String getDatabasePassword() {
+        return databasePassword;
+    }
+    
+    public String getHostAndDatabase() {
+        return hostAndDatabase;
+    }
+    
+}
